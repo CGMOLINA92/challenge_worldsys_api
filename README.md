@@ -36,31 +36,20 @@ git clone https://github.com/tu-usuario/challenge_worldsys_api.git
 cd challenge_worldsys_api
 Crear y activar entorno virtual (opcional pero recomendado):
 
-bash
-Copiar
-Editar
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
 Instalar dependencias:
 
-bash
-Copiar
-Editar
+
 pip install -r requirements.txt
 Configurar token de autenticación en test_import_api.py:
 
-python
-Copiar
-Editar
-auth_token="coloca_aqui_tu_token_valido"
+auth_token="colocar_token_valido"
  
 ▶️ Ejecución de pruebas
 Desde la raíz del proyecto, ejecutar:
-
-bash
-Copiar
-Editar
+ 
 pytest tests/test_import_api.py -v
  
 ✅ Casos cubiertos
@@ -70,7 +59,7 @@ personId válido (ej: 111, 200)
 
 Sad Path
 Valores inválidos: string, None, negativos, ID inexistente.
-→ Se espera respuesta HTTP 400 o 404 y mensajes de error adecuados.
+→ Se espera respuesta HTTP 400 o 404 y mensajes de error en cosistencia con el codigo.
 
 Validación de conexión
 Se valida que el servicio responde con algún código HTTP válido para detectar errores de conectividad.
